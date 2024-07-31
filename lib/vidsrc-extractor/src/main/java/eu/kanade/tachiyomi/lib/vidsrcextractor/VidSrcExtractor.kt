@@ -29,7 +29,7 @@ class VidsrcExtractor(private val client: OkHttpClient, private val headers: Hea
 
     private val keys by lazy {
         noCacheClient.newCall(
-            GET("https://raw.githubusercontent.com/KillerDogeEmpire/vidplay-keys/keys/keys.json", cache = cacheControl),
+            GET("https://github.com/Ciarands/vidsrc-keys/blob/main/keys.json", cache = cacheControl),
         ).execute().parseAs<List<String>>()
     }
 
